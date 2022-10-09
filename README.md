@@ -17,16 +17,7 @@ Nachiket Lele
 Harishankar
 <br>
 Shubham Kapoor
-<h2>Screenshots of the Project :</h2>
-<hr>
-<br>
-<img src="./sugar.png"/>
-<br>
-<br>
-<img src="./sugar1.png"/>
-<br>
-<br>
-<img src="./sugar2.png"/>
+
 <br>
 <br>
 
