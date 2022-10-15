@@ -45,14 +45,14 @@ const Addss = () => {
         <div className={Style.divs1}>
           <img
             className={Style.divs2}
-            src="https://d32baadbbpueqt.cloudfront.net/87e180d8-98a5-44d4-88f2-4af24327cd7c.jpg"
+            src="https://d32baadbbpueqt.cloudfront.net/Homepage/d1b038a4-418a-4309-92b1-9aff3b4393ea.jpg"
             alt=""
           />
         </div>
         <div className={Style.divs1}>
           <img
             className={Style.divs2}
-            src="https://d32baadbbpueqt.cloudfront.net/38a305ba-a808-4ade-ba72-fc55f5bc6183.jpg"
+            src="https://d32baadbbpueqt.cloudfront.net/Homepage/984514b9-81c3-4e2a-922e-7b18f42ef77f.jpg"
             alt=""
           />
         </div>

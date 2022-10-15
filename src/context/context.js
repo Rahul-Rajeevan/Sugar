@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-
+import ban1 from "./ban1.jpg"
 const l1 = [
   {
     id: 1,
@@ -723,7 +723,7 @@ let addss = [
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/Wedding-Makeup-Kit---WBG-Images-op-3.jpg?v=1653494398",
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/WBG1_09f0cf83-792a-4185-8882-5e5e6909a459.jpg?v=1657814596",
     name: "WEDDING MAKEUP KIT",
     price: 1699,
     offer: 2343,
@@ -786,7 +786,7 @@ let addss = [
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/Hi-5-KIT-WBG-Images1_43e43755-262f-4b35-973a-6e5fad7222a4.jpg?v=1643125074",
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/3_7.jpg?v=1626795160",
     name: "4-IN-1 MAKEUP-KIT",
     price: 999,
     offer: 1295,
@@ -1037,37 +1037,37 @@ let imggg = [
 const slideImages = [
   {
     image:
-      "https://d32baadbbpueqt.cloudfront.net/Homepage/85bc9b9b-d8b3-4fa1-a1b0-a77ca9428664.jpg",
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/7ade2492-3273-491d-bf3c-4051a2594fd6.jpg",
       id:1
   },
   {
     image:
-      "https://d32baadbbpueqt.cloudfront.net/549c6869-246f-4dba-8cde-7a6798f866ec.jpg",
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/f0877fa8-c09d-4c6e-9392-4e0eb70a2ccc.jpg",
       id:2
   },
   {
     image:
-      "https://d32baadbbpueqt.cloudfront.net/Homepage/7d151892-4d17-466e-8a06-743392796264.jpg",
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/2938eed1-8d16-4dec-bab2-f6e484adb659.gif",
       id:3
   },
   {
     image:
-      "https://d32baadbbpueqt.cloudfront.net/Homepage/309d5880-c650-4773-9cb9-5b8efc593ac0.jpg",
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/75ec7af2-2b60-4c0a-9d56-c9e12d328420.jpg",
       id:4
   },
   {
     image:
-      "https://d32baadbbpueqt.cloudfront.net/Homepage/9f159288-063a-4ca4-926a-7fd43c13d370.jpg",
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/87591a7c-d8f8-499c-9562-c89000ef7e4a.jpg",
       id:5
   },
   {
     image:
-      "https://d32baadbbpueqt.cloudfront.net/fc27be93-0882-45d7-aef9-0ad461636eae.jpg",
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/1fa29c9d-b7b6-4aa9-ac54-a2195c10fc63.jpg",
       id:6
   },
   {
     image:
-      "https://d32baadbbpueqt.cloudfront.net/Homepage/7d151892-4d17-466e-8a06-743392796264.jpg",
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/9f8fe6f9-3ebe-4d1b-9b15-d5e5e642868b.jpg",
       id:7
   },
 ];

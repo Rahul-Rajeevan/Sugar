@@ -12,15 +12,24 @@ const Search = () => {
   const { time, setsortval } = useContext(Box);
   const [love, setlove] = useState(false);
   const dispatch = useDispatch();
+  const [list, setlist] = useState([])
 
 
-
-
+useEffect(() => {
   let r = localStorage.getItem("search");
-
   let bigarr = JSON.parse(localStorage.getItem("bigarr"))||[];
+  let newbigarr=bigarr.filter(e=>e.name.includes(r))
+  console.log(newbigarr)
+  setlist(newbigarr)
   
- const newbigarr=bigarr.filter(e=>e.name.includes(r))
+}, [])
+
+
+
+
+  
+  
+
 
 
   const navigate= useNavigate();
@@ -45,7 +54,7 @@ const Search = () => {
         </div>
         <br />
         <div className={styles.q1}>
-          {newbigarr.map((e) => {
+          {list.map((e) => {
             e.quantity = 1;
             return (
               <div className={styles.q6} key={e.id}>
