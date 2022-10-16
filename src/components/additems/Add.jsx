@@ -4,7 +4,7 @@ import { Slide } from "react-slideshow-image";
 import Style from "./Add.module.css";
 import { useContext } from "react";
 import { Box } from "../../context/context";
-import Styles from "../../pages/Style.module.css";
+import Styles from "../../pages/styles/Style.module.css";
 import { Box1 } from "../../context/prop.context";
 import { useDispatch } from "react-redux";
 

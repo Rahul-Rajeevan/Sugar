@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react'
-import styles from './Style.module.css'
+import styles from './styles/Style.module.css'
 const Success = () => {
     let a=JSON.parse(localStorage.getItem("cartItem"))
     useEffect(() => {

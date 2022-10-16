@@ -1,27 +1,26 @@
-let cartData = JSON.parse(localStorage.getItem("cartItem")) || [];
+const initialState={
+  cart:[],
+  fav:[]
+}
 
-export const cartReducer = (cart = cartData, action) => {
-  // console.log(action.payload);
+export const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TO_CART": {
-      if (cartData === []) {
-        return;
-      } else localStorage.setItem("cartItem", JSON.stringify(cart));
-
-      let tempCart = cart.filter((item) => item.id === action.payload.id);
-      if (tempCart < 1) {
-        return [...cart, action.payload];
-      } else {
-        return cart;
-      }
+      let g=[...state.cart,action.payload]
+      return {...state,cart:g}
+      
+    }
+    case "ADD_TO_FAV": {
+      let g=[...state.fav,action.payload]
+      return {...state,fav:g}
+      
     }
     case "REMOVE": {
-      let remove_cart = cart.filter((item) => item.id !== action.payload.id);
-      localStorage.setItem("cartItem", JSON.stringify(remove_cart));
+      let remove_cart = state.cart.filter((item) => item.id !== action.payload.id);
       return remove_cart;
     }
     case "INCREASE": {
-      let tempCart = cart.map((item) => {
+      let tempCart = state.cart.map((item) => {
         if (item.id === action.payload.id) {
           return { ...item, quantity: item.quantity + 1 };
         }
@@ -30,7 +29,7 @@ export const cartReducer = (cart = cartData, action) => {
       return tempCart;
     }
     case "DECREASE": {
-      let tempCart = cart.map((item) => {
+      let tempCart = state.cart.map((item) => {
         if (item.id === action.payload.id) {
           return { ...item, quantity: item.quantity - 1 };
         }
@@ -39,6 +38,6 @@ export const cartReducer = (cart = cartData, action) => {
       return tempCart;
     }
     default:
-      return cart;
+      return state;
   }
 };

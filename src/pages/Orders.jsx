@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from "./Style.module.css"
+import styles from "./styles/Style.module.css"
 const Orders = () => {
    const navigate= useNavigate()
   return (

@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css";
+import "./css/Navbar.css";
 import styles from "../styles/Navbar.module.css";
-import stylesHp from "./login.module.css";
+import stylesHp from "./css/login.module.css";
 import { useState } from "react";
 import { useRef } from "react";
+import { Box } from "../context/context";
 const Navbar = () => {
-  // const ref12 = useRef("")
   let cat = [
     {
       id: 1,
@@ -14,11 +14,11 @@ const Navbar = () => {
       path: "/makeup",
       sub: {
         a: "LIPS",
-        p1: "/",
+        p1: "lip",
         b: "FACE",
-        p2: "/",
+        p2: "face",
         c: "EYES",
-        p3: "/",
+        p3: "eye",
         p4: "/",
         p5: "/",
         p6: "/",
@@ -32,9 +32,9 @@ const Navbar = () => {
       path: "/brushes",
       sub: {
         a: "FACE BRUSHES",
-        p1: "/",
+        p1: "face brush",
         b: "EYES BRUSHES",
-        p2: "/",
+        p2: "eye brush",
         p3: "/",
         p4: "/",
         p5: "/",
@@ -49,21 +49,21 @@ const Navbar = () => {
       path: "/skincare",
       sub: {
         a: "MOISTURIZERS",
-        p1: "/",
+        p1: "moist",
         b: "SUNSCREEN",
-        p2: "/",
+        p2: "suns",
         c: "SETTING MISTS",
-        p3: "/",
+        p3: "mist",
         d: "COFFEE CULTURE RANGE",
-        p4: "/",
+        p4: "coffee",
         e: "SHEET MASK COMBO",
-        p5: "/",
+        p5: "mask",
         f: "CITRUS GOT REAL RANGE",
-        p6: "/",
+        p6: "citrus",
         g: "MASKS",
-        p7: "/",
+        p7: "mask",
         h: "AQUAHOLIC RANGE",
-        p8: "/",
+        p8: "aqua",
       },
     },
     {
@@ -105,24 +105,16 @@ const Navbar = () => {
       },
     },
   ];
+
+  const {setsearch } = useContext(Box);
   const navigate = useNavigate();
   const [verify, setVerify] = useState(false);
   const [otp, setOtp] = useState("");
   const [firstName, setFirstName] = useState("");
   const [name, setName] = useState(false);
-  const first = useContext(second)
-  const handleWishlist = ()=>{
-    navigate("/wishlist")
-  }
-  const handleCart = ()=>{
-    navigate("/cart")
-  }
-  const handleOffers = ()=>{
-    navigate("/offers")
-  }
-  const handleHome = ()=>{
-    navigate("/")
-  }
+
+  
+  
   const handleClick = () => {
     // console.log(firstName);
 
@@ -135,8 +127,7 @@ const Navbar = () => {
     }
   };
 
-  let firstname = JSON.parse(localStorage.getItem("firstname"));
-  // console.log(firstName.length);
+
 
   const hanleClickVerify = (e) => {
     if (otp === "8455") {
@@ -146,11 +137,17 @@ const Navbar = () => {
     }
   };
 
-
-  const handlesearch=()=>{
-    localStorage.setItem("search",ref12.current.value)
-    navigate("/search")
+let query="";
+  const handleSearch=(e)=>{
+    
+    query=e.target.value;
+    
   }
+const Search=()=>{
+  setsearch(query)
+  navigate("/search")
+}
+
   // console.log(otp);
   return (
 
@@ -172,9 +169,9 @@ const Navbar = () => {
               className={styles.navbarSugarInputSearchBox}
               type="text"
               placeholder='Try "Lipstick"'
-              ref={ref12}
+              onChange={handleSearch}
             />
-            <button className={styles.navbarSugarInputSearchButton} onClick={handlesearch}>
+            <button className={styles.navbarSugarInputSearchButton} onClick={Search}>
               Search
             </button>
           </div>
@@ -196,11 +193,12 @@ const Navbar = () => {
               <button
                 // type="button"
                 // class="btn btn-primary"
+                
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 className={stylesHp.loginInNav_button}
               >
-                <p>{name ? firstname : "Login/SignUp"}</p>
+                <p>{name ? "firstname" : "Login/SignUp"}</p>
               </button>
             </div>
             <div
@@ -386,7 +384,8 @@ const Navbar = () => {
       <div className="upperBox">
         {cat.map((el) => (
           <div className="main_menu" key={el.id}>
-            <Link className="menu-btn" to={el.path}>
+{/* zxczxvcxxcvxcvxcvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */}
+            <Link className="menu-btn" to={el.path} >
               {el.title}
             </Link>
 
@@ -395,44 +394,44 @@ const Navbar = () => {
                 <div className="div">
                   <ul>
                     <li>
-                      <Link className="p" to={el.sub.p1}>
-                        {el.sub.a}
-                      </Link>
+                    <p className="p" onClick={()=>{setsearch(el.sub.p1);
+          navigate("/search");
+          }}>{el.sub.a}</p>
                     </li>
                     <li>
-                      <Link className="p" to={el.sub.p2}>
-                        {el.sub.b}
-                      </Link>
+                      <p className="p" onClick={()=>{setsearch(el.sub.p2);
+          navigate("/search");
+          }}>{el.sub.b}</p>
                     </li>
                     <li>
-                      <Link className="p" to={el.sub.p3}>
-                        {el.sub.c}
-                      </Link>
+                    <p className="p" onClick={()=>{setsearch(el.sub.p3);
+          navigate("/search");
+          }}>{el.sub.c}</p>
                     </li>
                     <li>
-                      <Link className="p" to={el.sub.p4}>
-                        {el.sub.d}
-                      </Link>
+                    <p className="p" onClick={()=>{setsearch(el.sub.p4);
+          navigate("/search");
+          }}>{el.sub.d}</p>
                     </li>
                     <li>
-                      <Link className="p" to={el.sub.p5}>
-                        {el.sub.e}
-                      </Link>
+                    <p className="p" onClick={()=>{setsearch(el.sub.p4);
+          navigate("/search");
+          }}>{el.sub.e}</p>
                     </li>
                     <li>
-                      <Link className="p" to={el.sub.p6}>
-                        {el.sub.f}
-                      </Link>
+                    <p className="p" onClick={()=>{setsearch(el.sub.p5);
+          navigate("/search");
+          }}>{el.sub.f}</p>
                     </li>
                     <li>
-                      <Link className="p" to={el.sub.p7}>
-                        {el.sub.g}
-                      </Link>
+                    <p className="p" onClick={()=>{setsearch(el.sub.p6);
+          navigate("/search");
+          }}>{el.sub.g}</p>
                     </li>
                     <li>
-                      <Link className="p" to={el.sub.p8}>
-                        {el.sub.h}
-                      </Link>
+                    <p className="p" onClick={()=>{setsearch(el.sub.p7);
+          navigate("/search");
+          }}>{el.sub.h}</p>
                     </li>
                   </ul>
                 </div>

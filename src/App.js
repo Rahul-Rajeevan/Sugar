@@ -1,15 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import BRUSHES from "./pages/BRUSHES";
 import Cart from "./pages/Cart";
-import MAKEUP from "./pages/MAKEUP";
 import Map from "./pages/Map";
-import SKINCARE from "./pages/SKINCARE";
-import TRENDING from "./pages/TRENDING";
 import Checkout from "./pages/Checkout";
 import Payment from "./pages/Payment";
-import SingleItem from "./pages/SingleItem";
 import Offer from "./pages/Offer";
 import Wishlist from "./pages/Wishlist";
 import Stores from "./pages/Stores";
@@ -17,9 +12,12 @@ import Success from "./pages/Success";
 import Orders from "./pages/Orders";
 import PersonalInfo from "./pages/PersonalInfo";
 import Search from "./pages/Search";
-
+import Component from "./pages/Component";
+import { Box } from "./context/context";
+import { useContext } from "react";
 
 function App() {
+  const { brush_list,trend_list,skin_list } = useContext(Box);
   return (
     <div className="App">
       <Navbar />
@@ -27,16 +25,16 @@ function App() {
         <Route path="/" element={<Home />}>
           HOME
         </Route>
-        <Route path="/makeup" element={<MAKEUP />}>
+        <Route path="/makeup" element={<Component list={trend_list} filter_list={["Lipstick","Contour","Kajal","Remove"]}/>}>
           MAKEUP
         </Route>
-        <Route path="/brushes" element={<BRUSHES />}>
+        <Route path="/brushes" element={<Component list={brush_list} filter_list={["Eye","Face","Foundation","Remove"]}/>}>
           BRUSHES
         </Route>
-        <Route path="/skincare" element={<SKINCARE />}>
+        <Route path="/skincare" element={<Component list={skin_list} filter_list={["Moisturizer","Sunscreen","Mask","remove"]}/>} >
           SKINCARE
         </Route>
-        <Route path="/trending" element={<TRENDING />}>
+        <Route path="/trending" element={<Component list={trend_list} filter_list={["Lipstick","Contour","Kajal","Remove"]}/>} >
           TRENDING
         </Route>
         <Route path="/offers" element={<Offer />}>
@@ -45,7 +43,6 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/map" element={<Map />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/single" element={<SingleItem />} />
         <Route path="/guestCheckout" element={<Map />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payments" element={<Payment />} />

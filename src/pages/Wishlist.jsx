@@ -1,12 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import styles from "./Style.module.css";
-import person from './person.png'
-import pic1 from './pic1.jpg'
-import pic2 from './pic2.jpg'
-import pic3 from './pic3.jpg'
-import pic4 from './pic4.jpg'
-import img1 from "./star_filled.png";
+import styles from "./styles/Style.module.css";
+import person from './pic/person.png'
+import pic1 from './pic/pic1.jpg'
+import pic2 from './pic/pic2.jpg'
+import pic3 from './pic/pic3.jpg'
+import pic4 from './pic/pic4.jpg'
+import img1 from "./pic/star_filled.png";
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';

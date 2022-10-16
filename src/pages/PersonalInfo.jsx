@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from "./Style.module.css"
+import styles from "./styles/Style.module.css"
 
 const PersonalInfo = () => {
    let y= JSON.parse(localStorage.getItem("person"))||{}

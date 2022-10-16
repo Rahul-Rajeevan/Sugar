@@ -1,5 +1,5 @@
 import React from "react";
-import Style from "./Home.module.css";
+import Style from "./css/Home.module.css";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
 import Adds from "./additems/Adds";
@@ -9,14 +9,14 @@ import Addss from "./additems/Addss";
 import { Box1 } from "../context/prop.context";
 import Addsss from "./additems/Addsss";
 // import ReactPlayer from 'react-player'
-import girl1 from './1.mp4'
-import girl2 from './2.mp4'
-import girl3 from './3.mp4'
-import girl4 from './4.mp4'
-import girl5 from './5.mp4'
-import girl6 from './6.mp4'
-import girl7 from './7.mp4'
-import girl8 from './8.mp4'
+import girl1 from './video/1.mp4'
+import girl2 from './video/2.mp4'
+import girl3 from './video/3.mp4'
+import girl4 from './video/4.mp4'
+import girl5 from './video/5.mp4'
+import girl6 from './video/6.mp4'
+import girl7 from './video/7.mp4'
+import girl8 from './video/8.mp4'
 
 let arr = [
   {obj: `${girl1}`,id:1},{obj:`${girl2}`,id:2},{obj:`${girl3}`,id:3},{obj:`${girl5}`,id:4},{obj:`${girl4}`,id:5},{obj:`${girl6}`,id:6},{obj:`${girl7}`,id:7},{obj:`${girl8}`,id:8}

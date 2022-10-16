@@ -17,12 +17,12 @@ p {
 }
 .box1 {
   display: flex;
-  background-color: #f5f5f5;
+  background-color: white;
 }
 .box1_img {
   height: 20px;
   width: 20px;
-  background-color: #f5f5f5;
+  background-color: white;
   margin-top: 6px;
   margin-right: 5px;
 }
@@ -85,7 +85,7 @@ p {
 }
 .deleteBtn {
   border: none;
-  background-color: #f5f5f5;
+  background-color: white;
   cursor: pointer;
   margin-right: 20px;
   margin-left: 20px;
@@ -133,13 +133,13 @@ p {
 }
 .box12 {
   display: flex;
-  background-color: #f5f5f5;
+  background-color: white;
   height: 20px;
 }
 .box1_img2 {
   height: 20px;
   width: 20px;
-  background-color: #f5f5f5;
+  background-color: white;
   margin-top: -0px;
   margin-right: 5px;
 }
@@ -231,7 +231,7 @@ p {
   /* border: 1px solid; */
   width: 40px;
   margin-top: 0px;
-  background-color: #f5f5f5;
+  background-color: white;
   display: flex;
   background-color: #d3d3d3;
   margin-left: -30px;
@@ -261,7 +261,7 @@ p {
   /* border: 1px solid; */
   width: 40px;
   /* margin-top: 0px; */
-  background-color: #f5f5f5;
+  background-color: white;
   display: flex;
   background-color: #d3d3d3;
   margin-left: 10px;

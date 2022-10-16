@@ -1,5 +1,5 @@
 import React from 'react'
-import red from './red.jpg'
+import red from './pic/red.jpg'
 const Stores = () => {
   return (
     <div style={{width:"70%",margin:"auto",marginTop:"50px"}}>

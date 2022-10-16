@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { MdDelete } from "react-icons/md";
-import styles from "./cartStyles.module.css";
+import styles from "./styles/cartStyles.module.css";
 import { GrCart } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
-import styles1 from "./Style.module.css";
+import styles1 from "./styles/Style.module.css";
 import { useState } from "react";
 function Cart() {
   const cart = useSelector((state) => state);

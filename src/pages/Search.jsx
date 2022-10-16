@@ -1,28 +1,34 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Box } from "../context/context";
-import styles from "./Style.module.css";
-import img1 from "./star_filled.png";
+import styles from "./styles/Style.module.css";
+import img1 from "./pic/star_filled.png";
 import { useDispatch } from "react-redux";
-import img2 from "./imq2.jpg"
-import img3 from "./filterIcon.png"
+import img2 from "./pic/imq2.jpg"
+import img3 from "./pic/filterIcon.png"
 import { useNavigate } from "react-router-dom";
 import Offer from "./Offer";
 import Footer from "../components/Footer";
 const Search = () => {
-  const { time, setsortval } = useContext(Box);
+  const { search,bigarr } = useContext(Box);
   const [love, setlove] = useState(false);
   const dispatch = useDispatch();
   const [list, setlist] = useState([])
 
 
 useEffect(() => {
-  let r = localStorage.getItem("search");
-  let bigarr = JSON.parse(localStorage.getItem("bigarr"))||[];
-  let newbigarr=bigarr.filter(e=>e.name.includes(r))
-  console.log(newbigarr)
+let g=search.split(" ")
+let newbigarr;
+if(g.length>0)
+  newbigarr=bigarr.filter(e=>e.name.toLowerCase().includes(g[0]))
+  else
+{
+  let h=bigarr.filter(e=>e.name.toLowerCase().includes(g[0]))
+  console.log(h);
+  newbigarr=h.filter(e=>e.name.toLowerCase().includes(g[1]))
+}
   setlist(newbigarr)
   
-}, [])
+}, [search])
 
 
 

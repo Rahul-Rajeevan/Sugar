@@ -1,7 +1,7 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
-import Styles from "../../pages/Style.module.css";
+import Styles from "../../pages/styles/Style.module.css";
 import Style from "./Add.module.css";
 import { useContext } from "react";
 import { Box } from "../../context/context";

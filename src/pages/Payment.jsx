@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import styles2 from "./checkoutStyles.module.css";
+import styles2 from "./styles/checkoutStyles.module.css";
 import { MdDelete } from "react-icons/md";
-import styles from "./cartStyles.module.css";
+import styles from "./styles/cartStyles.module.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 

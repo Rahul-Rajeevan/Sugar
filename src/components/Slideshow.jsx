@@ -1,7 +1,7 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
-import Style from "./Home.module.css";
+import Style from "./css/Home.module.css";
 import Part1 from "./Part1";
 import Part2 from "./Part2";
 import { useContext } from "react";

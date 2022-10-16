@@ -1,7 +1,7 @@
 import React from "react";
 import Add from "./additems/Add"
-import Style from "./Home.module.css"
-import refer from "./refer.jpg"
+import Style from "./css/Home.module.css"
+
 
 const Part1 = () => {
   return (
@@ -10,7 +10,7 @@ const Part1 = () => {
       <div className={Style.imgs}>
         <img
           className={Style.imgs1}
-          src={refer}
+          src="https://d32baadbbpueqt.cloudfront.net/Homepage/8bfe8bb4-002d-4097-a773-6af33325a594.jpg"
           alt=""
         />
       </div>

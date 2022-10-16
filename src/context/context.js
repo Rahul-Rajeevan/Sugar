@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import ban1 from "./ban1.jpg"
-const l1 = [
+
+// list of brush products
+const brush_list = [
   {
     id: 1,
     name: "Blend Trend Face Brush - 003 Contour",
@@ -116,7 +118,8 @@ const l1 = [
   },
 ];
 
-const l2 = [
+// list of trending products
+const trend_list = [
   {
     id: 14,
     name: "Matte Attack Transferproof Lipstick",
@@ -279,7 +282,8 @@ const l2 = [
   },
 ];
 
-const l3 = [
+// list of skin products
+const skin_list = [
   {
     id: 34,
     name: "Citrus Got Real Cooling Stick",
@@ -653,13 +657,6 @@ const slideImages3 = [
   },
 ];
 
-localStorage.setItem("list1", JSON.stringify(l1));
-localStorage.setItem("list2", JSON.stringify(l2));
-localStorage.setItem("list3", JSON.stringify(l3));
-
-let l11 = JSON.parse(localStorage.getItem("list1"));
-let l12 = JSON.parse(localStorage.getItem("list2"));
-let l13 = JSON.parse(localStorage.getItem("list3"));
 
 const slideImages4 = [
   {
@@ -1093,54 +1090,18 @@ const slideImages1 = [
 
 export const Box = createContext();
 export const BoxProvider = ({ children }) => {
-  const [list1, setlist1] = useState(l11);
-  const [list2, setlist2] = useState(l12);
-  const [list3, setlist3] = useState(l13);
-  const [search, setsearch] = useState(second)
- const bigarr=[...l1,...l2,...l3]
- localStorage.setItem("bigarr",JSON.stringify(bigarr))
- localStorage.setItem("person",JSON.stringify({name:"",phone:"",email:"",flat:"",apartment:"",city:"",state:""}))
-
- let yu=[];
- localStorage.setItem("fav",JSON.stringify(yu))
-
-  const [sortval, setsortval] = useState(0);
- 
-  const time = (l) => {
-    if (sortval === "3")
-      l.sort(function (a, b) {
-        return a.price - b.price;
-      });
-    else if (sortval === "2")
-      l.sort(function (a, b) {
-        return b.price - a.price;
-      });
-    else if (sortval === "1") {
-      l.sort(function (a, b) {
-        let fa = a.name.toLowerCase(),
-          fb = b.name.toLowerCase();
-
-        if (fa < fb) return -1;
-        if (fa > fb) return 1;
-
-        return 0;
-      });
-    }
-  };
- 
+  const [search, setsearch] = useState(" ")
+ const bigarr=[...brush_list,...trend_list,...skin_list]
 
   return (
     <Box.Provider
       value={{
-        list1,
-        list2,
-        list3,
-        setlist1,
-        setlist2,
-        setlist3,
-        search, setsearch,
-        time,
-        setsortval,
+        brush_list,
+        trend_list,
+        skin_list,
+        search, 
+        setsearch,
+        bigarr,
         addItems,
         adds,
         slideImages2,
@@ -1153,7 +1114,6 @@ export const BoxProvider = ({ children }) => {
         imggg,
         slideImages1,
         slideImages
-
       }}
     >
       {children}

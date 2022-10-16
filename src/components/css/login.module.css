@@ -26,6 +26,7 @@
 }
 .loginInNav_button {
   border: none;
+  background-color: white !important;
 }
 .form_tag_div {
   /* border: 1px solid red; */
