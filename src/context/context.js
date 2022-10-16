@@ -1096,6 +1096,7 @@ export const BoxProvider = ({ children }) => {
   const [list1, setlist1] = useState(l11);
   const [list2, setlist2] = useState(l12);
   const [list3, setlist3] = useState(l13);
+  const [search, setsearch] = useState(second)
  const bigarr=[...l1,...l2,...l3]
  localStorage.setItem("bigarr",JSON.stringify(bigarr))
  localStorage.setItem("person",JSON.stringify({name:"",phone:"",email:"",flat:"",apartment:"",city:"",state:""}))
@@ -1137,6 +1138,7 @@ export const BoxProvider = ({ children }) => {
         setlist1,
         setlist2,
         setlist3,
+        search, setsearch,
         time,
         setsortval,
         addItems,

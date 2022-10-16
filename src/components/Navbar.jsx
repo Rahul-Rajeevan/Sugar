@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import styles from "../styles/Navbar.module.css";
@@ -6,7 +6,7 @@ import stylesHp from "./login.module.css";
 import { useState } from "react";
 import { useRef } from "react";
 const Navbar = () => {
-  const ref12 = useRef("")
+  // const ref12 = useRef("")
   let cat = [
     {
       id: 1,
@@ -110,6 +110,7 @@ const Navbar = () => {
   const [otp, setOtp] = useState("");
   const [firstName, setFirstName] = useState("");
   const [name, setName] = useState(false);
+  const first = useContext(second)
   const handleWishlist = ()=>{
     navigate("/wishlist")
   }
